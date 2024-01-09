@@ -56,7 +56,7 @@ for( let i=1; i<=10; i+=1){
     
 }
 
-// JS Prototype
+// JS Prototype (Age Calculate)
 
 function Person(name, job, yearOfBirth){ 
 	this.name= name; 
@@ -77,3 +77,20 @@ console.log(person2)
 person1.calculateAge();
 person2.calculateAge();
 
+// JS Prototype (Student)
+
+function Student(name, rollno, joined, subject) {
+    this.name = name;
+    this.rollno = rollno;
+    this.joined = joined;
+    this.subject = subject;
+}
+Student.prototype.printDetails = function() {
+    console.log(`This student's name is ${this.name} and his rollno is ${this.rollno} and he joined in ${this.joined}`);
+};
+
+let student1 = new Student('asis', 17, 2023, 'computer');
+let student2 = new Student('dixzy', 19, 2021, 'IT');
+
+student1.printDetails();
+student2.printDetails();
