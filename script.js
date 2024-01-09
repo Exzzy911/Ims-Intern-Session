@@ -58,6 +58,8 @@ for( let i=1; i<=10; i+=1){
 
 // JS Prototype (Age Calculate)
 
+/*
+
 function Person(name, job, yearOfBirth){ 
 	this.name= name; 
 	this.job= job; 
@@ -77,7 +79,11 @@ console.log(person2)
 person1.calculateAge();
 person2.calculateAge();
 
+*/
+
 // JS Prototype (Student)
+
+/*
 
 function Student(name, rollno, joined, subject) {
     this.name = name;
@@ -95,7 +101,11 @@ let student2 = new Student('dixzy', 19, 2021, 'IT');
 student1.printDetails();
 student2.printDetails();
 
+*/
+
 // JS Prototype (Car)
+
+/*
 
 function cars(porsche){
     this.porsche=porsche;    
@@ -110,6 +120,7 @@ const cars2=new cars("XTr310");
 
 console.log(cars1);
 console.log(cars2);
+*/
 
 // JS Class and Getter + Setter Methods
 
@@ -135,6 +146,8 @@ console.log(subject1.subjectName);
 
 // JS Class Expression 1
 
+/*
+
 let person = class{
     constructor(name){
         this.name = name
@@ -146,6 +159,8 @@ let person = class{
 
 const person1 = new person("EXZY");
 console.log(person1);
+
+*/
 
 // Js Class Expression 2
 
@@ -228,6 +243,8 @@ log(1);
 
 // JS Object
 
+/*
+
 const company = {
     Name: "facebook",
     Employee: {
@@ -241,8 +258,11 @@ const company = {
 for (let prop in company)
 console.log(prop+":"+company[prop]);
 
+*/
+
 // JS Object Ex.2
 
+/*
 
 const company = {
     Name: "facebook",
@@ -256,7 +276,11 @@ for (let prop in company) {
     console.log(company);
 }
 
+*/
+
 // Rough Example Js Object
+
+/*
 
 const employee = {
     firstName: "Exzy",
@@ -268,9 +292,11 @@ const employee = {
 
 employee.hello();
 
+*/
 
 // JS Prototype
 
+/*
 function student(name, section){
     this.name=name;
     this.section=section
@@ -281,6 +307,7 @@ let student2 = new student("Loxzy", "B");
 
 console.log(student1);
 
+*/
 
 // JS Object Destructing ( new variable add garna use huncha)
 
@@ -318,3 +345,211 @@ const cars2 = new Cars("ferrari", 900,"exzy",86);
 cars1.ChangeName="mercedeX";
 
 console.log(cars1);
+
+
+// JS Array
+
+let fruits =["apple", "loxzy", "strawberry"];
+//fruits.push("orange");
+fruits.pop();
+fruits.shift();
+
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+// Js Class Expression
+
+let employee = class {
+    constructor(name,age,location){
+        this.name=name;
+        this.age=age;
+        this.location=location
+    }
+    getName(){
+        return this.name;
+    }  
+
+}
+const employee1 = new employee("asis",21,"ktm");
+
+console.log(employee1);
+
+
+function college(name,subject,location,Phno){
+    this.name= name;
+    this.subject = subject;
+    this.location = location;
+    this.Phno = Phno 
+}
+
+let Nepal = new college("Islingtion", "BscIT", "KamalPokhari", +97709876);
+
+console.log(Nepal);
+
+
+// SetTimeout Function of Js
+
+setTimeout(()=> {
+    console.log("HEYYYY");
+}, 5000);
+
+// JS Call Back Function
+
+function display(result){
+    console.log(result);
+}
+function add(num1 , num2 , mycallback){
+    let Sum= num1+num2;
+    mycallback(Sum);
+}
+add(10,20,display)
+
+// Call Back Function 
+
+hello(goodbye, wait, leave);
+
+function hello(callback, waitcallback, leavecallback){
+    console.log("Hello");
+    waitcallback();
+    callback();
+    leavecallback();
+   
+    
+}
+function wait(){
+    console.log("wait");
+}
+function leave(){
+    console.log("leave");
+}
+function goodbye(){
+    console.log("goodbye");
+}
+
+
+// JS Object
+
+const company = {
+    Name: "facebook",    
+    Job: "Frontend",
+    salary: "$17000 in a month"
+
+};
+for (let prop in company)
+console.log(prop+":"+company[prop]);
+
+
+// Recursive Function
+
+function count(num){
+    console.log(num);
+    num++;
+    if(num<50){
+        count(num);
+
+    }
+    
+}
+count(10);
+
+
+// Js Function
+
+function IMS(Firstname, Lasname){
+    console.log("IT COMPANY " + Firstname+" " + Lasname);
+}
+ IMS(100, 500);
+
+ // Js Class Inheritance
+
+ class person{
+    constructor(fname, lname){
+        this.fname=fname;
+        this.lname=lname;
+
+    }
+    greet(){
+        console.log("Hello "+ this.fname , this.lname);
+    }
+ }
+ class student extends person{
+
+ }
+ const student1 = new student("Peter","parker");
+
+ student1.greet();
+ 
+// Js Class Inheritance and super method use
+
+class personp1{
+    constructor(name){
+        this.name=name;
+
+    }
+    greet(){
+        console.log("Hello "+this.name);
+    }
+
+}
+class studentx extends personp1{
+    constructor(name){                     // created superclass which calls person(name)
+        super(name);
+    }
+
+}
+const studentp1 = new studentx("Exzyy");
+studentp1.greet();
+
+
+// Method Overiding in JS
+
+class Mobile{
+    constructor(name){
+        this.name=name;
+
+    }
+    
+    static hey(){
+        console.log("HEllo");
+    }
+
+    greet(){
+        console.log("This mobile  is"+this.name);
+    }
+
+
+}
+class lenovo extends Mobile{
+    greet(){
+        console.log("This laptop is "+this.name);
+    }
+
+}
+lenovo.hey();
+const lenovo1 = new lenovo("lenevo");
+lenovo1.greet();
+
+
+// JS Return Function
+
+function appx(){
+    return function(){
+        console.log("HEYYY");
+    }
+}
+const app1 = appx();
+app1();
+
+
+
+function log(num){
+    if(num > 5){
+        return;
+    }
+    console.log(num);
+    log(num + 2);
+}
+
+log(1);
