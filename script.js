@@ -224,3 +224,59 @@ log(1);
         console.log("IMS");
     }
     )();
+
+
+// JS Object
+
+const company = {
+    Name: "facebook",
+    Employee: {
+        Name="Ashish", 
+        Work:"frontend"
+    },    
+    Job: "Frontend",
+    salary: "$17000 in a month"
+
+};
+for (let prop in company)
+console.log(prop+":"+company[prop]);
+
+// JS Object Ex.2
+
+
+const company = {
+    Name: "facebook",
+    Employee: "Exzy",
+    Job: "Frontend",
+    salary: "$17000 in a month"
+};
+
+// used for loop to get all prop
+for (let prop in company) {
+    console.log(company);
+}
+
+// Rough Example Js Object
+
+const employee = {
+    firstName: "Exzy",
+    lastName: "loxzy",
+    hello: function greet(){
+        console.log("HEYYYY");
+    }
+}
+
+employee.hello();
+
+
+// JS Prototype
+
+function student(name, section){
+    this.name=name;
+    this.section=section
+}
+
+let student1 = new student("ashish", "A");
+let student2 = new student("Loxzy", "B");
+
+console.log(student1);
