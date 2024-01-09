@@ -170,3 +170,57 @@ radius = Number(radius);
 circumference = 2 * pi * radius;
 
 console.log(circumference);
+
+// JS Call Back Function
+
+function display(result){
+    console.log(result);
+
+}
+
+function add(num1, num2, mycallback){
+    let sum= num1 + num2;
+    mycallback(sum)
+
+}
+add(10, 20, display)
+
+// JS Anonymous Function
+
+let sum = function(x,y){
+    return x+y;
+}
+console.log(sum (10, 10));
+
+(
+function(){
+    console.log("HEyy Its Name")
+}
+)();
+
+// Anonymous Function Ex.1
+
+setTimeout(function(){
+    console.log("HEYYY");
+}, 1000);
+
+// Recursive function
+
+function log(num){
+    if(num > 5){
+        return;
+    }
+    console.log(num);
+    log(num + 2);
+}
+
+log(1);
+
+
+// Anonymous function Ex.2
+
+(   
+    function(){
+        console.log("IMS");
+    }
+    )();
