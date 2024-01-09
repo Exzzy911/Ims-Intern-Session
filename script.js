@@ -280,3 +280,41 @@ let student1 = new student("ashish", "A");
 let student2 = new student("Loxzy", "B");
 
 console.log(student1);
+
+
+// JS Object Destructing ( new variable add garna use huncha)
+
+const Laptop = {
+    Name : "Msi",
+    Modelno : 273,
+    Country : "china",
+}
+let{Name, Modelno, country, x=21}=Laptop;
+
+console.log(x);
+
+// JS Class + getter & Setter
+
+class Cars{
+    constructor(name,model,ownername,KM){
+        this.name=name;
+        this.model=model;
+        this.ownername=ownername;
+        this.KM=KM
+    }
+    get greet(){ // getter use garey pachi () garna pardaina
+        return "HEyyy " +this.name;
+    } //setter method use vayo to set new changed name
+    set ChangeName(carname){
+        this.name=carname;
+
+    }
+}
+
+const cars1 = new Cars("porche", 311,"exzy",86);
+const cars2 = new Cars("ferrari", 900,"exzy",86);
+
+
+cars1.ChangeName="mercedeX";
+
+console.log(cars1);
