@@ -94,3 +94,79 @@ let student2 = new Student('dixzy', 19, 2021, 'IT');
 
 student1.printDetails();
 student2.printDetails();
+
+// JS Prototype (Car)
+
+function cars(porsche){
+    this.porsche=porsche;    
+}
+function cars(mercedes){
+    this.mercedes=mercedes;
+}
+cars.prototype.model="super car";
+
+const cars1=new cars("p911");
+const cars2=new cars("XTr310");
+
+console.log(cars1);
+console.log(cars2);
+
+// JS Class and Getter + Setter Methods
+
+class subject{
+    constructor(name, joindate){
+        this.name=name;
+        this.joingdate=joindate;
+
+    }
+    set subjectName(newname){
+        this.name = newname;
+    }
+    get subjectName(){
+        return this.name;
+    }
+    
+}
+const subject1= new subject("IT", 2023);
+
+subject1.subjectName = "Computer";
+console.log(subject1.subjectName);
+
+
+// JS Class Expression 1
+
+let person = class{
+    constructor(name){
+        this.name = name
+    }
+    getName(){
+        return this.name
+    }
+}
+
+const person1 = new person("EXZY");
+console.log(person1);
+
+// Js Class Expression 2
+
+let brand="porche";
+let model=911; 
+
+const car = {
+    brand,
+    model 
+}
+
+console.log(car);
+
+// Calculation Circumference
+
+let pi=31.111;
+let radius;
+let circumference;
+
+radius = window.prompt('Enter Number');
+radius = Number(radius);
+circumference = 2 * pi * radius;
+
+console.log(circumference);
